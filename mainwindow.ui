@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1043</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="editwin">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calisto MT</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textwin">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>90</y>
+      <width>821</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>351</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文行楷</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>基于查找表的单词检索软件</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="runtime">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>151</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>410</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>        单位：ms</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushBotton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>110</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>搜索</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="preButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Pre</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="nextButton">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>160</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Next</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backButton">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>200</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Back</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>400</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2000次重复搜索所用时间</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1043</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="filebar">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="OpenBotton"/>
+    <addaction name="SaveBotton"/>
+    <addaction name="ReadBotton"/>
+    <addaction name="HelpBotton"/>
+    <addaction name="QuitBotton"/>
+   </widget>
+   <widget class="QMenu" name="SSTbar">
+    <property name="title">
+     <string>静态查找表</string>
+    </property>
+    <addaction name="TraSSTBotton"/>
+   </widget>
+   <widget class="QMenu" name="BSTbar">
+    <property name="title">
+     <string>二叉查找树</string>
+    </property>
+    <addaction name="AddBSTBotton"/>
+    <addaction name="DelBSTBotton"/>
+    <addaction name="TraBSTBotton"/>
+   </widget>
+   <addaction name="filebar"/>
+   <addaction name="SSTbar"/>
+   <addaction name="BSTbar"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="OpenBotton">
+   <property name="text">
+    <string>打开待读文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="SaveBotton">
+   <property name="text">
+    <string>保存搜索文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="ReadBotton">
+   <property name="text">
+    <string>读取搜索文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>说明文档</string>
+   </property>
+  </action>
+  <action name="NewSSTBotton">
+   <property name="text">
+    <string>创建查找表</string>
+   </property>
+  </action>
+  <action name="a">
+   <property name="text">
+    <string>搜索单词</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="TraSSTBotton">
+   <property name="text">
+    <string>遍历查找表</string>
+   </property>
+  </action>
+  <action name="DesSSTBotton">
+   <property name="text">
+    <string>销毁查找表</string>
+   </property>
+  </action>
+  <action name="NewBSTBotton">
+   <property name="text">
+    <string>创建查找树</string>
+   </property>
+  </action>
+  <action name="FindBSTBotton">
+   <property name="text">
+    <string>搜索单词</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="AddBSTBotton">
+   <property name="text">
+    <string>新增单词</string>
+   </property>
+  </action>
+  <action name="DelBSTBotton">
+   <property name="text">
+    <string>删除单词</string>
+   </property>
+  </action>
+  <action name="TraBSTBotton">
+   <property name="text">
+    <string>遍历查找树</string>
+   </property>
+  </action>
+  <action name="DesBSTBotton">
+   <property name="text">
+    <string>销毁查找树</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="text">
+    <string>关闭程序</string>
+   </property>
+  </action>
+  <action name="HelpBotton">
+   <property name="text">
+    <string>帮助</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="QuitBotton">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>editwin</sender>
+   <signal>returnPressed()</signal>
+   <receiver>pushBotton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>148</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
